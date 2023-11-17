@@ -71,15 +71,17 @@ else:
     top_probs = predictions[0, top_classes_indices]
 
     # Display the top classes and probabilities
-    st.write("Top Predicted Classes:")
-    for i, (cls, prob) in enumerate(zip(top_classes, top_probs)):
-        st.write(f"{i + 1}. {cls} - Probability: {prob * 100:.2f}%")
+    # st.write("Top Predicted Classes:")
+    # for i, (cls, prob) in enumerate(zip(top_classes, top_probs)):
+    #     st.write(f"{i + 1}. {cls} - Probability: {prob * 100:.2f}%")
 
     # Display the class with the highest probability
     predicted_class_index = np.argmax(predictions)
     predicted_class = class_names[predicted_class_index]
     predicted_prob = predictions[0, predicted_class_index]
 
-    st.write(f"\nPredicted Class: {predicted_class} - Probability: {predicted_prob * 100:.2f}%")
+    # st.write(f"\nPredicted Class: {predicted_class} - Probability: {predicted_prob * 100:.2f}%")
+    st.write("Predicted Class: {predicted_class}")
+    
     st.balloons()
     st.sidebar.success(f"Alphabet detected: {predicted_class}")

@@ -60,9 +60,12 @@ else:
     st.sidebar.error("Accuracy : " + str(x) + " %")
 
     class_names = [
-        'ཀ', 'ཁ', 'ག', 'ང', 'ཅ', 'ཆ', 'ཇ', 'ཉ', 'ཏ', 'ཐ',
-        'ད', 'ན', 'པ', 'ཕ', 'བ', 'མ', 'ཙ', 'ཚ', 'ཛ', 'ཝ',
-        'ཞ', 'ཟ', 'འ', 'ཡ', 'ར', 'ལ', 'ཤ', 'ས', 'ཧ', 'ཨ'
+        'ཀ - ka', 'ཁ - kha', 'ག - ga', 'ང - nga', 'ཅ - cha', 'ཆ - chha',
+        'ཇ - ja', 'ཉ - nye', 'ཏ - ta', 'ཐ - tha',
+        'ད - da', 'ན - na', 'པ - pa', 'ཕ - pha', 'བ - ba', 'མ -ma', 'ཙ -tsa',
+        'ཚ - tsha', 'ཛ - dza', 'ཝ - wa',
+        'ཞ - zha', 'ཟ - za', 'འ - aw', 'ཡ - ya', 'ར - ra', 'ལ - la', 'ཤ -sha',
+        'ས - sa', 'ཧ - ha', 'ཨ - a'
     ]
 
     # Get the top predicted classes and their probabilities
@@ -81,7 +84,7 @@ else:
     predicted_prob = predictions[0, predicted_class_index]
 
     # st.write(f"\nPredicted Class: {predicted_class} - Probability: {predicted_prob * 100:.2f}%")
-    st.write("Predicted Class: {predicted_class}")
+    # st.write("Predicted Class: {predicted_class}")
     
     st.balloons()
     st.sidebar.success(f"Alphabet detected: {predicted_class}")
